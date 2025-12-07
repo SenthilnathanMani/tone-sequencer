@@ -93,7 +93,7 @@ function createSequencerRow(instrument) {
 function createStepName(instrument) {
   const nameDiv = document.createElement("div");
   nameDiv.classList.add(
-    "w-[40px]",
+    "w-[10px]",
     "flex",
     "items-center",
     "justify-center",
