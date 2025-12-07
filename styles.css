@@ -1,0 +1,30 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes glowRadial {
+  0% {
+    background: radial-gradient(
+      circle farthest-corner at center,
+      rgba(255, 94, 247, 1) 18%,
+      rgba(2, 245, 255, 1) 100%
+    );
+    background-clip: text;
+  }
+  100% {
+    background: radial-gradient(
+      circle farthest-corner at center,
+      rgba(255, 94, 247, 1) 28%,
+      rgba(2, 245, 255, 1) 120%
+    );
+
+    background-clip: text;
+  }
+}
+
+.hover\:animate-radialGlow:hover {
+  animation: glowRadial 1.2s ease-in-out alternate infinite;
+}

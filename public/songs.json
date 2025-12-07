@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Beat It",
+    "artist": "Michael Jackson",
+    "link": "?bpm=139&b=gCAIAIiIAAgAAAAA"
+  },
+  {
+    "title": "Birds of a Feather",
+    "artist": "Billie Eilish",
+    "link": "?bpm=105&b=kiAICAAAAACqqgAA"
+  },
+  {
+    "title": "(Sittin' On) The Dock of the Bay",
+    "artist": "Otis Redding",
+    "link": "?bpm=104&b=gKAICAAAAAAAAAAA"
+  },
+  {
+    "title": "Mary Jane's Last Dance",
+    "artist": "Tom Petty and the Heartbreakers",
+    "link": "?bpm=85&b=gKAICAAAAACAgAAA"
+  },
+  {
+    "title": "Coffee & TV",
+    "artist": "Blur",
+    "link": "?bpm=122&b=gKAICKqqAAAAAAAA"
+  },
+  {
+    "title": "Wake Up",
+    "artist": "Arcade Fire",
+    "link": "?bpm=70&b=gKAICAAAAAAAAAAA"
+  },
+  {
+    "title": "Jazz Beat 1",
+    "artist": "JWM",
+    "link": "?bpm=90&b=giIICKqqAAAAAAAA"
+  },
+  {
+    "title": "Jazz Beat 2",
+    "artist": "JWM",
+    "link": "?bpm=95&b=gkQQEKqqAAAAAAAA"
+  },
+  {
+    "title": "Jazz Beat 3",
+    "artist": "JWM",
+    "link": "?bpm=75&b=ykogIqqqCAgAAAAA"
+  }
+]

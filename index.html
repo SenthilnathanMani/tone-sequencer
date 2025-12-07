@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, interactive-widget=resizes-content, height=device-height"
+    />
+    <meta name="description" content="Web application for simple Jam session" />
+    <meta
+      name="keywords"
+      content="drum machine, music, web, sequencer, drum, machine, jam, jam with music, jamming, tone sequencer"
+    />
+    <title>Tone Sequencer | Drum Machine for the web</title>
+
+    <meta
+      name="twitter:title"
+      content="Web application for simple Jam session"
+    />
+    <meta
+      name="twitter:description"
+      content="A lightweight sequencer that lets you create, share, and practice your instrument with backing tracks."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body
+    class="h-screen w-full bg-gray-900 text-white flex flex-col overflow-y-auto"
+  >
+    <header
+      class="sticky top-0 z-50 backdrop-blur-xl bg-white/20 border-b border-white/30 shadow-lg p-4 flex justify-center items-center"
+    >
+      <nav
+        onclick="window.location.reload()"
+        class="font-bold text-4xl bg-[radial-gradient(circle_farthest-corner_at_center,rgba(255,94,247,1)_17.8%,rgba(2,245,255,1)_100.2%)] rounded-xl transition-all text-gradient bg-clip-text text-transparent hover:animate-radialGlow cursor-pointer"
+      >
+        Tone Sequencer
+      </nav>
+      <div class="absolute right-2 top-[-5px] z-200 hidden" id="dj">
+        <img
+          src="/public/dj-animated.gif"
+          alt="DJ Gif"
+          class="w-[6rem] rounded-lg shadow-lg"
+        />
+      </div>
+    </header>
+    <div id="app" class="px-4 py-8 flex-grow w-full">
+      <main class="w-full md:w-[70%] mx-auto space-y-2">
+        <section
+          class="flex w-full justify-between space-y-4 pl-4"
+          id="controls"
+        >
+          <div class="flex space-x-4 items-center" title="Beats Per Minute">
+            <label for="bpm" class="font-bold">BPM:</label
+            ><input
+              id="bpm"
+              type="number"
+              label="BPM"
+              value="120"
+              class="bg-white text-black w-18 border-none outline-none rounded-md p-1 shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div class="space-x-4">
+            <button
+              class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded cursor-pointer w-24"
+              id="play-button"
+            >
+              Play
+            </button>
+            <button
+              class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded cursor-pointer"
+              id="share-button"
+            >
+              Share
+            </button>
+          </div>
+        </section>
+        <section class="w-full">
+          <div
+            class="grid md:grid-rows-[auto_repeat(6,1fr)] gap-2"
+            id="sequencer"
+          ></div>
+        </section>
+        <section class="w-full">
+          <div id="songs" class="space-y-2 pl-4">
+            <h2 class="text-2xl font-bold mb-4">Ready to use Tones:</h2>
+            <ul
+              id="song-list"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2"
+            ></ul>
+          </div>
+        </section>
+        <section class="full pl-4 pt-4">
+          Use the 16-step sequencer to build your own tracks and play along
+          anywhere using an internet browser. No paywalls, no ads, no trackers.
+        </section>
+      </main>
+    </div>
+    <footer
+      class="sticky bottom-0 z-50 backdrop-blur-xl bg-white/20 border-t border-white/30 shadow-lg p-4 flex justify-center items-center"
+    >
+      <a
+        class="flex text-underline"
+        href="https://www.linkedin.com/in/senthilnathan-mani-b7068685"
+        target="_blank"
+        >@Senthilnathan Mani</a
+      >
+    </footer>
+
+    <script src="/app.js" defer></script>
+    <div
+      class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3 absolute z-100 right-[50%] translate-x-1/2 bottom-2 w-96 hidden"
+      role="alert"
+      id="share-alert"
+    >
+      <p class="font-bold">Success</p>
+      <p class="text-sm">Link to share track is copied to your clipboard.</p>
+    </div>
+    <div
+      class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded absolute z-150 bottom-0 right-[50%] translate-x-1/2 w-96 bottom-2 hidden"
+      role="alert"
+      id="share-error"
+    >
+      <p>An error occurred while trying to share the track</p>
+    </div>
+  </body>
+</html>
