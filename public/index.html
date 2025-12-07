@@ -36,7 +36,7 @@
     >
       <nav
         onclick="window.location.reload()"
-        class="font-bold text-4xl bg-[radial-gradient(circle_farthest-corner_at_center,rgba(255,94,247,1)_17.8%,rgba(2,245,255,1)_100.2%)] rounded-xl transition-all text-gradient bg-clip-text text-transparent hover:animate-radialGlow cursor-pointer"
+        class="font-bold text-4xl bg-[radial-gradient(circle_farthest-corner_at_center,rgba(255,94,247,1)_17.8%,rgba(2,245,255,1)_100.2%)] rounded-xl transition-all text-gradient bg-clip-text text-transparent animate-radialGlow cursor-pointer"
       >
         Tone Sequencer
       </nav>
@@ -51,7 +51,7 @@
     <div id="app" class="px-4 py-8 flex-grow w-full">
       <main class="w-full md:w-[70%] mx-auto space-y-2">
         <section
-          class="flex w-full justify-between space-y-4 pl-4"
+          class="flex w-full justify-between space-y-2 pl-4 space-x-4 flex-wrap"
           id="controls"
         >
           <div class="flex space-x-4 items-center" title="Beats Per Minute">
@@ -64,7 +64,9 @@
               class="bg-white text-black w-18 border-none outline-none rounded-md p-1 shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
-          <div class="space-x-4">
+          <div
+            class="grid items-center justify-center gap-2 grid-cols-1 md:grid-cols-2"
+          >
             <button
               class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded cursor-pointer w-24"
               id="play-button"
@@ -72,7 +74,7 @@
               Play
             </button>
             <button
-              class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded cursor-pointer"
+              class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded cursor-pointer ml-2"
               id="share-button"
             >
               Share
