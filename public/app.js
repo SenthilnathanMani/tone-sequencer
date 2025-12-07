@@ -8,12 +8,12 @@ try {
 const audioBuffers = {};
 
 const audioNames = {
-  kick: "public/kick.mp3",
-  snare: "public/snare.mp3",
-  hi_hat: "public/hi_hat.mp3",
-  clap: "public/clap.mp3",
-  tom: "public/tom.mp3",
-  rattle: "public/rattle.mp3",
+  kick: "assets/kick.mp3",
+  snare: "assets/snare.mp3",
+  hi_hat: "assets/hi_hat.mp3",
+  clap: "assets/clap.mp3",
+  tom: "assets/tom.mp3",
+  rattle: "assets/rattle.mp3",
 };
 
 const sequencerContainer = document.getElementById("sequencer-container");
@@ -153,7 +153,7 @@ function createSteps(instrument) {
 
 function createSonglist() {
   const songlist = document.getElementById("song-list");
-  fetch("public/songs.json")
+  fetch("assets/songs.json")
     .then((response) => response.json())
     .then((songs) => {
       songs.forEach((song) => {
