@@ -21,6 +21,7 @@ const playButton = document.getElementById("play-button");
 const bpmInput = document.getElementById("bpm");
 const shareButton = document.getElementById("share-button");
 const dj = document.getElementById("dj");
+const djVideo = document.getElementById("djVideo");
 
 const instruments = [
   { label: "Kick", value: "kick" },
@@ -180,10 +181,8 @@ document.addEventListener("visibilitychange", function () {
 playButton.addEventListener("click", () => {
   if (!playing) {
     startSequencer();
-    dj.classList.remove("hidden");
   } else {
     stopSequencer();
-    dj.classList.add("hidden");
   }
 });
 
@@ -196,6 +195,7 @@ function startSequencer() {
   current16th = 0;
   nextNoteTime = audioContext.currentTime;
   scheduler();
+  showDj();
 }
 
 function stopSequencer() {
@@ -207,6 +207,17 @@ function stopSequencer() {
   }
 
   clearPlayingHighlight();
+  hideDj();
+}
+
+function showDj() {
+  dj.classList.remove("hidden");
+  djVideo.classList.remove("hidden");
+}
+
+function hideDj() {
+  dj.classList.add("hidden");
+  djVideo.classList.add("hidden");
 }
 
 function scheduler() {
